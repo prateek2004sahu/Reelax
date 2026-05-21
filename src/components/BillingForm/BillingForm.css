@@ -1,0 +1,187 @@
+.billing-form {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px 32px 32px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.billing-form__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+
+.billing-form__section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b6b80;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f5;
+}
+
+.billing-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.billing-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.billing-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.billing-form__label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4a4a62;
+  letter-spacing: 0.1px;
+}
+
+.billing-form__optional {
+  font-weight: 400;
+  color: #9899a6;
+  font-size: 12px;
+}
+
+.billing-form__input {
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid #e2e3ec;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1a1a2e;
+  background: #fafbff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.billing-form__input::placeholder {
+  color: #b0b0c0;
+  font-size: 13px;
+}
+
+.billing-form__input:focus {
+  border-color: #4361ee;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.08);
+  background: #fff;
+}
+
+.billing-form__input--readonly {
+  background: #f5f6fa;
+  color: #6b6b80;
+  cursor: not-allowed;
+}
+
+/* Select Wrapper */
+.billing-form__select-wrapper {
+  position: relative;
+}
+
+.billing-form__select {
+  height: 38px;
+  padding: 0 36px 0 12px;
+  border: 1px solid #e2e3ec;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1a1a2e;
+  background: #fafbff;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.billing-form__select:focus {
+  border-color: #4361ee;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.08);
+  background: #fff;
+}
+
+.billing-form__select option[value=""] {
+  color: #b0b0c0;
+}
+
+.billing-form__select-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #9899a6;
+  display: flex;
+  align-items: center;
+}
+
+/* Actions */
+.billing-form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f5;
+}
+
+.billing-form__btn {
+  padding: 9px 24px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.1px;
+}
+
+.billing-form__btn--cancel {
+  background: transparent;
+  color: #6b6b80;
+  border: 1px solid #e2e3ec;
+}
+
+.billing-form__btn--cancel:hover {
+  background: #f5f6fa;
+  color: #3d3d55;
+}
+
+.billing-form__btn--save {
+  background: #4361ee;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.billing-form__btn--save:hover {
+  background: #3451d1;
+  box-shadow: 0 4px 12px rgba(67, 97, 238, 0.25);
+}
+
+@media (max-width: 600px) {
+  .billing-form {
+    padding: 20px 18px 24px;
+  }
+
+  .billing-form__row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .billing-form__title {
+    font-size: 18px;
+  }
+}
